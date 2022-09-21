@@ -1,16 +1,19 @@
-# pnpm-ci
+# @aiou/mario-template
+> a minimal mario template
 
 ## usage
 
+Use it as mario generator template.
+
 ```console
-neo run @aiou/generator-pnpm-ci
+neo create @aiou/mario-template my-mario-app
 ```
 
-## features
+Run as a normal mario generator
 
-prepack follow parts into your project
+```console
+neo run @aiou/mario-template
+```
 
-- `release.yml` - publish package with `changeset`
-- `snapshot-release.yml` - publish prerelease package with `changeset`
-- `.husky & lint-staged` - lint-staged precommit with eslint config [@aiou/eslint-config](https://github.com/JiangWeixian/eslint-config)
-- `ISSUE_TEMPLATE & PR_REQUEST_TEMPLATE` - see [here](https://github.com/neo-hack/neo/tree/master/packages/core/assets/templates) for more details
+see [Documentation](https://neo-docs.netlify.app/guide/mario-api.html#create-a-preset) for more information about how to write a mario generator.
+
