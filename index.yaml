@@ -1,0 +1,17 @@
+jobs:
+  Setup Pkg:
+    paths: package.json
+    name: Setup CI config
+    steps:
+      - name: Add CI Scripts
+        uses: json-editor
+        with:
+          pairs:
+            - path: "scripts.ci:version"
+              value: "pnpm changeset version"
+            - path: "scripts.ci:publish"
+              value: "pnpm run build && pnpm changeset publish"
+            - path: "scripts.ci:snapshot"
+              value: "pnpm changeset version --snapshot beta"
+            - path: "scripts.ci:prerelease"
+              value: "pnpm run build && pnpm changeset publish --tag beta"
